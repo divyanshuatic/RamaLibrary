@@ -1,1 +1,182 @@
-/* Add your styles here */
+
+/* General Body and HTML styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Custom Navigation Links */
+.nav-link {
+    @apply text-slate-700 hover:text-teal-600 transition-colors duration-300 font-semibold;
+}
+
+/* Custom Buttons */
+.btn {
+    @apply py-2 px-5 rounded-full font-semibold transition-all duration-300;
+}
+
+.btn-primary {
+    @apply bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+    @apply bg-slate-200 text-slate-700 hover:bg-slate-300 shadow-md;
+}
+
+/* Hamburger Icon for Mobile Menu */
+.hamburger {
+    @apply text-slate-700 hover:text-teal-600;
+}
+
+/* Hero Section Adjustment */
+.hero-section-adjusted {
+    margin-top: 50px; /* Adjust this value as needed to move the hero section down */
+}
+
+/* Shubharambh Ribbon */
+.shubharambh-ribbon {
+    position: absolute;
+    top: 0;
+    right: 20px; /* Adjust as needed */
+    background-color: #ef4444; /* Red-600 */
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(-100%); /* Start above the section */
+    animation: slideDown 1s forwards 1s; /* Delay animation by 1 second */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.shubharambh-ribbon span {
+    display: block;
+    transform: rotate(5deg); /* Slight rotation for flair */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Carousel Styles */
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    /* Calculate width based on number of images and their dimensions */
+    /* Assuming 12 images, each 300px wide + 20px margin (10px each side) = 320px per image */
+    /* Total width for one set of images = 12 * 320px = 3840px */
+    /* For infinite loop, we duplicate images, so track width is double */
+    width: calc(320px * 24); /* 12 original + 12 duplicated images */
+    animation: scroll 60s linear infinite; /* Adjust duration as needed, doubled for doubled width */
+}
+
+.carousel-image {
+    width: 300px; /* Fixed width for each image */
+    height: 400px; /* Adjusted height for 3:4 aspect ratio (300 * 4/3) */
+    object-fit: cover;
+    margin: 0 10px; /* Space between images */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 12)); /* Translate by the width of one set of images */
+    }
+}
+
+/* Illustrated Cards for Services Section */
+.illustrated-card {
+    @apply p-8 rounded-lg shadow-lg flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl;
+}
+
+.card-icon-wrapper {
+    @apply w-24 h-24 rounded-full flex items-center justify-center mb-6 text-5xl;
+}
+
+.card-title {
+    @apply text-2xl font-semibold text-slate-800 mb-3;
+}
+
+.card-desc {
+    @apply text-slate-600 text-base;
+}
+
+/* Popup Modal Specific Styles */
+.modal-content-offset {
+    transform: translateY(-95px); /* Adjust this value as needed to move the modal up */
+}
+
+/* Features & Amenities Section (from the duplicated section in index.html) */
+.features-amenities-section {
+    @apply py-20 bg-slate-100; /* Re-applying section styles */
+}
+
+.features-amenities-section .container {
+    @apply mx-auto px-4; /* Re-applying container styles */
+}
+
+.features-amenities-section h2 {
+    @apply text-3xl md:text-4xl font-bold border-b-2 border-teal-600 pb-2 inline-block mb-16; /* Re-applying heading styles */
+}
+
+.features-amenities-section p {
+    @apply text-slate-600 mt-2 max-w-2xl mx-auto; /* Re-applying paragraph styles */
+}
+
+.features-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto;
+}
+
+.feature-card {
+    @apply bg-white p-6 rounded-lg shadow-lg text-center;
+}
+
+.feature-card .icon-placeholder {
+    @apply w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-teal-100;
+}
+
+.feature-card .icon-placeholder img {
+    @apply w-16 h-16 object-contain;
+}
+
+.feature-card h3 {
+    @apply text-xl font-semibold text-slate-800 mb-2;
+}
+
+.feature-card p {
+    @apply text-slate-600;
+}
+
+/* Responsive adjustments for the duplicated section */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
