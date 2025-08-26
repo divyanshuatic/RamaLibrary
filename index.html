@@ -48,14 +48,14 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-[60vh] py-16 flex items-center justify-center bg-slate-100">
+        <section id="home" class="relative min-h-[60vh] py-16 flex items-center justify-center bg-slate-100 hero-section-adjusted">
             <div class="shubharambh-ribbon"><span>शुभारंभ</span></div>
             <div class="relative text-center p-4">
                 <img src="images/logo.png" alt="Library Logo" class="block w-32 h-32 mx-auto mb-4 rounded-full object-cover">
                 <h1 class="text-5xl md:text-7xl font-extrabold text-slate-800" style="font-family: 'Teko', sans-serif;">Rama's Library</h1>
                 <p class="text-xl md:text-2xl mt-4 font-semibold text-slate-600">Perfect Atmosphere For Self Study</p>
                 <a href="https://wa.me/7976020669?text=Hi,%20I'm%20interested%20in%20registering%20for%20a%20seat%20at%20Rama's%20Library." target="_blank" class="mt-8 bg-red-600 text-white py-2 px-6 rounded-full inline-block transform hover:scale-105 transition-transform">
-                    <span class="text-lg font-bold animate-pulse">Registrations Open! Limited Seats Available.</span>
+                    <span class="text-lg font-bold animate-pulse">Click for Free Demo! Limited Seats.</span>
                 </a>
                 <div class="mt-10 space-x-4">
                     <a href="https://wa.me/7976020669?text=Hi,%20I%20would%20like%20to%20reserve%20a%20seat%20at%20Rama's%20Library." target="_blank" class="btn btn-primary text-lg">Reserve a Seat</a>
@@ -115,45 +115,62 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20 bg-slate-100">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold border-b-2 border-teal-600 pb-2 inline-block">Key Features & Amenities</h2>
+       <!-- Services Section - Best -->
+       <section id="services" class="py-20 bg-slate-100" aria-labelledby="services-heading">
+          <div class="container mx-auto px-4">
+              <div class="text-center mb-16">
+                    <h2 id="services-heading" class="text-3xl md:text-4xl font-bold border-b-2 border-teal-600 pb-2 inline-block">Key Features & Amenities</h2>
                     <p class="text-slate-600 mt-2 max-w-2xl mx-auto">Everything you need for an effective and comfortable study session.</p>
+                 </div>
+        <div class="grid grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto">
+
+            <!-- Feature 1: Peaceful Environment -->
+            <figure class="illustrated-card bg-blue-50">
+                <div class="card-icon-wrapper bg-blue-100">
+                    <span class="text-4xl" role="img" aria-label="A symbol representing silence and a quiet environment.">🔇</span>
                 </div>
-                <div class="grid grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto">
-                    <div class="illustrated-card bg-blue-50">
-                        <div class="card-icon-wrapper bg-blue-100">
-                            <span class="text-4xl">🔇</span>
-                        </div>
-                        <h3 class="card-title">Peaceful Environment</h3>
-                        <p class="card-desc">Minimal distractions and a respectful ambience for deep, uninterrupted focus.</p>
-                    </div>
-                    <div class="illustrated-card bg-green-50">
-                        <div class="card-icon-wrapper bg-green-100">
-                            <span class="text-4xl">💺</span>
-                        </div>
-                        <h3 class="card-title">Ergonomic Seating</h3>
-                        <p class="card-desc">Comfortable, contoured chairs designed for long, pain-free study sessions.</p>
-                    </div>
-                    <div class="illustrated-card bg-yellow-50">
-                        <div class="card-icon-wrapper bg-yellow-100">
-                            <span class="text-4xl">🌐</span>
-                        </div>
-                        <h3 class="card-title">High-Speed Internet</h3>
-                        <p class="card-desc">Fast and stable Wi-Fi access for all your research, learning, and online classes.</p>
-                    </div>
-                    <div class="illustrated-card bg-red-50">
-                        <div class="card-icon-wrapper bg-red-100">
-                            <span class="text-4xl">🎥</span>
-                        </div>
-                        <h3 class="card-title">24/7 CCTV Security</h3>
-                        <p class="card-desc">Your safety is our top priority, with continuous monitoring throughout the premises.</p>
-                    </div>
+                <figcaption>
+                    <h3 class="card-title">Peaceful Environment</h3>
+                    <p class="card-desc">Minimal distractions and a respectful ambience for deep, uninterrupted focus.</p>
+                </figcaption>
+            </figure>
+
+            <!-- Feature 2: Ergonomic Seating -->
+            <figure class="illustrated-card bg-green-50">
+                <div class="card-icon-wrapper bg-green-100">
+                    <span class="text-4xl" role="img" aria-label="A comfortable chair, symbolizing ergonomic seating.">💺</span>
                 </div>
-            </div>
-        </section>
+                <figcaption>
+                    <h3 class="card-title">Ergonomic Seating</h3>
+                    <p class="card-desc">Comfortable, contoured chairs designed for long, pain-free study sessions.</p>
+                </figcaption>
+            </figure>
+
+            <!-- Feature 3: High-Speed Internet -->
+            <figure class="illustrated-card bg-yellow-50">
+                <div class="card-icon-wrapper bg-yellow-100">
+                    <span class="text-4xl" role="img" aria-label="A globe, representing worldwide high-speed internet access.">🌐</span>
+                </div>
+                <figcaption>
+                    <h3 class="card-title">High-Speed Internet</h3>
+                    <p class="card-desc">Fast and stable Wi-Fi access for all your research, learning, and online classes.</p>
+                </figcaption>
+            </figure>
+
+            <!-- Feature 4: 24/7 CCTV Security -->
+            <figure class="illustrated-card bg-red-50">
+                <div class="card-icon-wrapper bg-red-100">
+                    <span class="text-4xl" role="img" aria-label="A security camera, representing 24/7 CCTV monitoring.">🎥</span>
+                </div>
+                <figcaption>
+                    <h3 class="card-title">24/7 CCTV Security</h3>
+                    <p class="card-desc">Your safety is our top priority, with continuous monitoring throughout the premises.</p>
+                </figcaption>
+            </figure>
+
+        </div>
+    </div>
+    </section>
         
         
 
@@ -215,50 +232,49 @@
                 <p class="font-bold">Ganesh Chaturthi Discount</p>
                 <p class="text-2xl font-bold"><del class="text-red-500">₹699</del> ₹599 <span class="text-base font-normal">only</span></p>
             </div>
-            <a href="https://wa.me/7976020669?text=Hi,%20I'm%20interested%20in%20the%20free%20demo%20for%20Rama's%20Library." target="_blank" class="btn btn-primary w-full">Claim Your Demo</a>
+            <a href="https://wa.me/7976020669?text=Hi,%20I'm%20interested%20in%20the%20free%20demo%20for%20Rama's%20Library." target="_blank" class="btn bg-red-600 text-white hover:bg-red-700 w-full rounded-full py-3 px-8 text-lg font-bold transform hover:scale-105 transition-transform animate-pulse">Claim Your Demo</a>
         </div>
     </div>
 
     <script src="js/script.js"></script>
-    <section class="features-amenities-section">
-        <div class="container">
-            <h2>Key Features & Amenities</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon-placeholder">
-                        <!-- Replace 'images/logo.png' with your actual icon for Peaceful Environment -->
-                        <img src="images/logo.png" alt="Peaceful Environment Icon">
-                    </div>
-                    <h3>Peaceful Environment</h3>
-                    <p>Minimal distractions and a respectful ambience for deep focus.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-placeholder">
-                        <!-- Replace 'images/logo.png' with your actual icon for Ergonomic Seating -->
-                        <img src="images/logo.png" alt="Ergonomic Seating Icon">
-                    </div>
-                    <h3>Ergonomic Seating</h3>
-                    <p>Comfortable chairs designed for long study sessions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-placeholder">
-                        <!-- Replace 'images/logo.png' with your actual icon for High-Speed Internet -->
-                        <img src="images/logo.png" alt="High-Speed Internet Icon">
-                    </div>
-                    <h3>High-Speed Internet</h3>
-                    <p>Fast and stable Wi-Fi for research and online classes.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-placeholder">
-                        <!-- Replace 'images/logo.png' with your actual icon for 24/7 CCTV Security -->
-                        <img src="images/logo.png" alt="24/7 CCTV Security Icon">
-                    </div>
-                    <h3>24/7 CCTV Security</h3>
-                    <p>Continuous monitoring to ensure safety.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>
